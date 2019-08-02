@@ -6,14 +6,12 @@ if __name__ =="__main__":
     print("Wybierz opcję:")
     print('1.Zaloguj')
     print('2.Zarejestruj')
-    x = input("Wybierz opcję")
+    x = int(input("Wybierz opcję"))
+    print(x)
     if x == 1:
         username = input('Podaj nazwę użytkownika.')
         password = input('Podaj hasło.')
-        if u.login(username, password):
-            print("Udało ci się zalogować.")
-        else:
-            print("Niestety nie udało się zalogować.")
+        i = User(username, password, loging_in=1)
     elif x == 2:
         new_username = input('Podaj nowa nazwe uzytkownika:')
         new_password = input('Podaj nowe haslo:')
